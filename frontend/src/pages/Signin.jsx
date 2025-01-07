@@ -14,7 +14,10 @@ const Signin = () => {
   async function signInRequest(e) {
     e.preventDefault();
     try {
-      const response = await axios.post(`${Backend_Url}/signin`, signinInputs);
+      const response = await axios.post(
+        `${Backend_Url}/api/user/signin`,
+        signinInputs
+      );
       const token = response.data.token;
       localStorage.setItem("token", token);
       navigate("/");

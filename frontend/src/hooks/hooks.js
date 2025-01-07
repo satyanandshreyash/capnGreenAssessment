@@ -19,7 +19,7 @@ export const useUser = () => {
                 return;
             }
             try {
-                const response = await axios.get(`${Backend_Url}/home`, {
+                const response = await axios.get(`${Backend_Url}/api/user/home`, {
                     headers: {
                         Authorization: token,
                     },

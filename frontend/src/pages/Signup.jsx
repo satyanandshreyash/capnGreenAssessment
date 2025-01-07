@@ -15,7 +15,7 @@ const Signup = () => {
   async function signupRequest(e) {
     e.preventDefault();
     try {
-      const response = await axios.post(`${Backend_Url}/signup`, signupInputs);
+      const response = await axios.post(`${Backend_Url}/api/user/signup`, signupInputs);
       const token = response.data.token;
       localStorage.setItem("token", token);
       navigate("/");
